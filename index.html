@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My login App</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="main">
+            <div id="hs">
+                <h1 id="title">Sign Up</h1>
+            </div>
+            <div id="inputs">
+                <input type="text" id="username" placeholder="Insert Username">
+                <input type="password" id="password" placeholder="Insert Password">
+                <div id="Questions">
+                    <label id="Question">Already have an Account? </label>
+                    <button onclick="toggleSignUp()" id="toggleSignUp">Log In</button>
+                </div>
+            </div>
+            <div id="extra">
+                <button id="confirm" onclick="Confirm()">Confirm</button>
+            </div>
+        </div>
+
+        <script src="client.js"></script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * { box-sizing: border-box; }
+            #main {
+                display: flex;
+                min-height: 100px;
+            }
+
+            .i {
+                flex: 1;
+                border: 5px;
+                padding: 10px;
+                border: black solid 1px;
+            }
+
+            .i1 {background-color: cyan;}
+            .i2 {background-color: tomato;}
+            .i3 {background-color: gold;}
+
+            @media (max-width: 600px) {
+                #main {
+                    flex-direction: column; /* Impila verticalmente */
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <div class="i1 i"></div>
+            <div class="i2 i"></div>
+            <div class="i3 i"></div>
+        </div>
+    </body>
+</html>

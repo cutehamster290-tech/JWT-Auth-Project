@@ -1,0 +1,63 @@
+:root {
+    --logInColor: blue;
+}
+
+* { border-radius: 10px; font-family: Arial, Helvetica, sans-serif; }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main {
+    height: 91vh;
+    width: 95vw;
+    border: black solid 2px;
+    display: grid;
+    padding: 20px;
+}
+@media (min-width:767px) { #main { width: 50vw; } }
+
+#extra, #inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+#hs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Questions * {
+    font-weight: bold;
+}
+
+input { width: 86%; margin: 10px; padding: 20px; font-size:120%;}
+#confirm { width: auto; padding: 1% 10%; font-size: 200%;}
+#toggleSignUp {
+    font: inherit;
+    color: var(--logInColor);
+    border: none;
+    background-color: rgba(0,0,0,0);
+    cursor: pointer;
+    text-decoration: underline var(--logInColor) 1px;
+}
+
+#confirm {
+    cursor: pointer;
+    transition: transform .1s ease;
+    background-color: #91ffab;
+}
+input, #confirm { border: rgba(0,0,0, .7) solid .5px; }
+h1 { font-size: 300%; justify-content: center;}
+h4 { margin-bottom: 3%; }
+
+#confirm:hover { transform: scale(.9); }
+#confirm:active { transform: scale(1.1); }
+input:focus { outline: none; border: 2px solid #007bff; }
