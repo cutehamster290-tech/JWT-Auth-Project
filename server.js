@@ -30,11 +30,19 @@ app.post('/signUp', async (req, res) => {
     return res.status(201).json({message: 'Finished!'})
 })
 
-app.post('/logIn', (req, res) => {
+app.post('/logIn', async (req, res) => {
     const {username, password} = req.body
     if (username == '' || password == '') return res.status(400).json({error: 'Empty inputs'})
+    
+    const available = await pool.query(
+        'SELECT username FROM users WHERE username = $1', [username]
+    )
 
-    return res.status(201).json({message: 'Finished!'})
+    if (!available) return res.status(400).json({error: "User Doesn't exists, try Sign In."})
+
+    // check if password is correct, if yes then guaruntee the access
+
+    return res.status(201).json({message: 'Log In Done!'})
 })
 
 app.listen(3000)
